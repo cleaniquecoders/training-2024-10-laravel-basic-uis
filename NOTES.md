@@ -88,3 +88,11 @@ Then seed the `DevSeeder`
 ```bash
 php artisan db:seed --class=DevSeeder
 ```
+
+### Package: DebugBar
+
+Install DebugBar:
+
+```bash
+composer require barryvdh/laravel-debugbar --dev
+```
