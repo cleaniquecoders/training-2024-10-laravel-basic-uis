@@ -72,3 +72,19 @@ public function __invoke(Request $request)
 All views are located in `resources/views` directory.
 
 All views are with suffix `.blade.php`.
+
+### Database: Seeders
+
+Create database seeder for Development purpose:
+
+```bash
+php artisan make:seeder DevSeeder
+```
+
+Update DevSeeder as in [database/seeders/DevSeeder.php](database/seeders/DevSeeder.php)
+
+Then seed the `DevSeeder`
+
+```bash
+php artisan db:seed --class=DevSeeder
+```
