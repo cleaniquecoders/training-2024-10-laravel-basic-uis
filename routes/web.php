@@ -7,6 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -27,3 +29,7 @@ Route::get('/hello', function() {
 use App\Http\Controllers\WelcomeController;
 
 Route::get('/welcome', WelcomeController::class);
+
+Route::get('/welcome2', function () {
+    return view('welcome-too');
+});
