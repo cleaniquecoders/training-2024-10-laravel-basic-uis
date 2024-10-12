@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,3 +16,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+Route::get('/hello', function() {
+    echo 'hello';
+});
+
+// php artisan make:controller WelcomeController --invokable
+use App\Http\Controllers\WelcomeController;
+
+Route::get('/welcome', WelcomeController::class);
